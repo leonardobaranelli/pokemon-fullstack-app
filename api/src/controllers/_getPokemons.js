@@ -2,7 +2,7 @@ const axios = require("axios");
 const { Pokemon, Type } = require("../db");
 const { infoPokemonAPI, infoPokemonDB } = require('../helpers');
 
-const getPokemonsAPI = async () => {
+const _getPokemonsAPI = async () => {
     const promises = [];
     const totalPokemons = 36; 
 
@@ -19,7 +19,7 @@ const getPokemonsAPI = async () => {
     return infoPokemons;
 }
 
-const getPokemonsDB = async () => { 
+const _getPokemonsDB = async () => { 
     const pokemons = await Pokemon.findAll({        
         include: Type,
       });  
@@ -29,6 +29,6 @@ const getPokemonsDB = async () => {
  }
 
 module.exports = {
-    getPokemonsAPI,
-    getPokemonsDB,    
+    _getPokemonsAPI,
+    _getPokemonsDB,    
 }
