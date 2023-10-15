@@ -3,6 +3,7 @@ const { randomImage } = require('../helpers');
 
 const ranImgMinLimit = 200;
 const ranImgMaxLimit = 700;
+
 const _createPokemon = async (
   id,
   name,
