@@ -15,7 +15,7 @@ const postPokemon = async (req, res) => {
   } = req.body;
 
   try {
-    const newPokemon = await createPokemon(
+    const newPokemon = await _createPokemon(
       id,
       name,
       image,
