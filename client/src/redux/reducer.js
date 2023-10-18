@@ -1,6 +1,7 @@
 import { 
     GET_POKEMONS,   
     GET_POKE_BY_ID,
+    GET_POKE_BY_NAME,
 
 } from "./actionTypes";
 
@@ -21,6 +22,10 @@ const rootReducer = (state = initialState, { type, payload }) => {
             return state; 
 
         case GET_POKE_BY_ID:
+            if(payload != undefined)
+            return {...state, pokemons: [payload, ...state.pokemons]};    
+
+        case GET_POKE_BY_NAME:
             if(payload != undefined)
             return {...state, pokemons: [payload, ...state.pokemons]};    
       
