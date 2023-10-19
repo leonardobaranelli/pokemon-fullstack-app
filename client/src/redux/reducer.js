@@ -3,6 +3,7 @@ import {
     GET_POKE_BY_ID,
     GET_POKE_BY_NAME,
     GET_POKE_DETAILS,
+    CLEAN_POKE_DETAILS,
 
 } from "./actionTypes";
 
@@ -33,6 +34,10 @@ const rootReducer = (state = initialState, { type, payload }) => {
         case GET_POKE_DETAILS:            
             return {...state, 
                 pokeDetails: payload};   
+                    
+        case CLEAN_POKE_DETAILS:
+                return {...state,
+                    pokeDetails: {}};            
       
         default:
             return state;
