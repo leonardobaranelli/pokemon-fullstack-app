@@ -4,3 +4,4 @@ export const GET_POKE_BY_NAME = "GET_POKE_BY_NAME";
 export const GET_POKE_DETAILS = "GET_POKE_DETAILS";
 export const CLEAN_POKE_DETAILS = "CLEAN_POKE_DETAILS"; 
 export const FILTER_POKEMONS = "FILTER_POKEMONS"; 
+export const SET_PAGE = 'SET_PAGE';  

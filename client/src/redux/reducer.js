@@ -7,6 +7,7 @@ import {
     GET_POKE_DETAILS,
     CLEAN_POKE_DETAILS,
     FILTER_POKEMONS,
+    SET_PAGE,
 
 } from "./actionTypes";
 
@@ -18,6 +19,7 @@ export const initialState = {
         isActive: false,        
         activeOptions: [], 
     },        
+    Paginated_currentPage: 1,
 };
 
 const rootReducer = (state = initialState, { type, payload }) => {
@@ -89,7 +91,13 @@ const rootReducer = (state = initialState, { type, payload }) => {
                         activeOptions: [],
                     },  
                 };     
-            }                                   
+            }                   
+        
+        case SET_PAGE:
+            return {
+            ...state,
+            Paginated_currentPage: payload,
+        };                    
       
         default:
             return state;
