@@ -5,6 +5,7 @@ import { _getPokeDetails } from "./_actions/_getPokeDetails";
 import { _cleanPokeDetails } from "./_actions/_cleanPokeDetails";
 import { _filterPokemons } from "./_actions/_filterPokemons";
 import { _setPage } from "./_actions/_setPage";
+import { _persistFilterState } from "./_actions/_persistFilterState";
 
 export { _getPokemons as getPokemons };
 export { _getPokeByID as getPokeByID };
@@ -13,3 +14,4 @@ export { _getPokeDetails as getPokeDetails };
 export { _cleanPokeDetails as cleanPokeDetails };
 export { _filterPokemons as filterPokemons };
 export { _setPage as setPage };
+export { _persistFilterState as persistFilterState };

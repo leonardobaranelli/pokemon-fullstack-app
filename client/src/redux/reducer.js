@@ -1,54 +1,57 @@
 import { typeNames } from "../functions";
 
 import { 
-    GET_POKEMONS,   
-    GET_POKE_BY_ID,
-    GET_POKE_BY_NAME,
-    GET_POKE_DETAILS,
+    GET_POKEMONS, 
+    GET_POKE_BY_ID, 
+    GET_POKE_BY_NAME, 
+    GET_POKE_DETAILS,     
     CLEAN_POKE_DETAILS,
     FILTER_POKEMONS,
     SET_PAGE,
+    PERSIST_FILTER_STATE,    
 
 } from "./actionTypes";
 
 export const initialState = {
-    pokemons: [],        
-    pokeDetails: {},
+    pokemons: [],    
+    pokeDetails: {},    
     filter: {
         filteredPokemons: [],
-        isActive: false,        
+        isActive: false,
+        isPersistent: true,
         activeOptions: [], 
     },        
-    Paginated_currentPage: 1,
-};
+    Paginated_currentPage: 1,    
+  };
 
 const rootReducer = (state = initialState, { type, payload }) => {
     switch(type) {
         case GET_POKEMONS:
-            if (payload !== undefined) {                
+            if (payload !== undefined) {
+                
                 const uniquePayload = payload.filter(newPokemon => 
                     !state.pokemons.some(existingPokemon => 
                         existingPokemon.id === newPokemon.id));
                 return { ...state, pokemons: [...state.pokemons, ...uniquePayload] };
             }
             return state; 
-
+        
         case GET_POKE_BY_ID:
             if(payload != undefined)
-                return {...state, pokemons: [payload, ...state.pokemons]};    
-
+            return {...state, pokemons: [payload, ...state.pokemons]};
+        
         case GET_POKE_BY_NAME:
             if(payload != undefined)
-                return {...state, pokemons: [payload, ...state.pokemons]};    
+            return {...state, pokemons: [payload, ...state.pokemons]};
 
         case GET_POKE_DETAILS:            
             return {...state, 
-                pokeDetails: payload};   
-                    
+                pokeDetails: payload};    
+                
         case CLEAN_POKE_DETAILS:
-                return {...state,
-                    pokeDetails: {}};      
-                   
+            return {...state,
+                pokeDetails: {}};    
+
         case FILTER_POKEMONS:            
             const { activeOptions } = payload;
             
@@ -91,13 +94,23 @@ const rootReducer = (state = initialState, { type, payload }) => {
                         activeOptions: [],
                     },  
                 };     
-            }                   
-        
+            }               
+  
         case SET_PAGE:
             return {
             ...state,
             Paginated_currentPage: payload,
-        };                    
+        };
+
+        case PERSIST_FILTER_STATE:
+            return { 
+                ...state,
+                filter: 
+                    {           
+                    ...state.filter,         
+                    isPersistent: payload,
+                }    
+            };
       
         default:
             return state;
@@ -105,6 +118,7 @@ const rootReducer = (state = initialState, { type, payload }) => {
 };
 
 export default rootReducer;
+
 
 
 
