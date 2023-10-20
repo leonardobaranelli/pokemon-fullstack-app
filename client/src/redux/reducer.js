@@ -8,7 +8,8 @@ import {
     CLEAN_POKE_DETAILS,
     FILTER_POKEMONS,
     SET_PAGE,
-    PERSIST_FILTER_STATE,    
+    PERSIST_FILTER_STATE,
+    RESET_FILTER_STATE,
 
 } from "./actionTypes";
 
@@ -111,6 +112,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
                     isPersistent: payload,
                 }    
             };
+
+        case RESET_FILTER_STATE:
+            return {
+                ...state,
+                filter: initialState.filter,
+            };
       
         default:
             return state;
@@ -118,9 +125,3 @@ const rootReducer = (state = initialState, { type, payload }) => {
 };
 
 export default rootReducer;
-
-
-
-
-
-                        
