@@ -1,0 +1,11 @@
+.mainLink{
+    color: white;    
+    font-size: xx-large;
+}
+
+body {        
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-image: url('../../assets/landing.jpg'); 
+}
