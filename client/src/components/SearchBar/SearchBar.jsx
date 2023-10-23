@@ -1,7 +1,7 @@
 import style from "./SearchBar.module.scss";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getPokeById, getPokeByName, getPokeDetails } from "../../redux/actions";
+import { getPokeByID, getPokeByName, getPokeDetails } from "../../redux/actions";
 
 const SearchBar = () => {
 
@@ -18,7 +18,7 @@ const SearchBar = () => {
       try {
         let pokemon;
         if (!isNaN(search)) {     
-          pokemon = await dispatch(getPokeById(search));                        
+          pokemon = await dispatch(getPokeByID(search));                        
         } else {              
           pokemon = await dispatch(getPokeByName(search));                      
         }        
