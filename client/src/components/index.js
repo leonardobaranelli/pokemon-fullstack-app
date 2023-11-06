@@ -3,5 +3,7 @@ import CardsContainer from "./CardsContainer/CardsContainer"
 import Card from './Card/Card';
 import Page from "./Page/Page"
 import Alert from './Alert/Alert';
+import Filters from './Filters/Filters';
+import Settings from './Settings/Settings';
 
-export { SearchBar, CardsContainer, Card, Page, Alert };
+export { SearchBar, CardsContainer, Card, Page, Alert, Filters, Settings };
