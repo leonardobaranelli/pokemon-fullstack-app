@@ -1,10 +1,11 @@
-import { SearchBar } from "../../components";
+import { SearchBar, CardsContainer } from "../../components";
 
 const Home = () => {
     
     return (
         <div>
-            <SearchBar />                
+            <SearchBar />        
+            <CardsContainer />        
         </div>
     );
 }
