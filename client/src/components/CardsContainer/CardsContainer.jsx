@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Card, Alert } from "../../components";
+import React, { useState } from "react";
 import style from "./CardsContainer.module.scss";
-import Pagination from "../Pagination/Pagination";
+import axios from "axios";
+import { Card, Page, Alert } from "../../components";
 import { useSelector, useDispatch } from "react-redux";
 import { getPokemons, setPage } from "../../redux/actions";
 import { sortByField, errorHandler } from "../../functions";
@@ -86,7 +85,7 @@ const CardsContainer = () => {
         ))}
       </div>
 
-      <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+      <Page currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
     </div>
   );
 };
