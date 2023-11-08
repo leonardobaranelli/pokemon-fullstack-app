@@ -5,5 +5,6 @@ import Page from "./Page/Page"
 import Alert from './Alert/Alert';
 import Filters from './Filters/Filters';
 import Settings from './Settings/Settings';
+import NavBar from './NavBar/NavBar';
 
-export { SearchBar, CardsContainer, Card, Page, Alert, Filters, Settings };
+export { SearchBar, CardsContainer, Card, Page, Alert, Filters, Settings, NavBar  };
