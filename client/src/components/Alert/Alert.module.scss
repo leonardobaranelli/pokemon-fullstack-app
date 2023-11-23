@@ -1,0 +1,26 @@
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    opacity: 0; 
+    font-size: larger;
+    animation: fadeInOut 4s ease-out; 
+  }
+  
+  .success {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .error {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
