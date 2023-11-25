@@ -1,0 +1,73 @@
+.mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.5em;
+    margin: 0.1em;
+  }
+  
+  .sortContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+  
+    .sortButton, .filterContainer {
+      margin-right: 0.3em; 
+      font-size: 17px;
+    }
+  
+    .sortButton {
+      background-color: rgba(69, 160, 73, 0.75);          
+      padding: 0.5em 1em;
+      color: white;
+      padding: 0.8em 1.2em;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      
+      cursor: pointer;
+      transition: all 0.25s ease;
+    
+      &:hover {
+        background-color: #4caf50;
+        transform: scale(1.03);
+      }
+    
+      &:active {
+        transform: scale(1.03);
+      }    
+    
+      &:disabled {
+        background-color: #808080;
+        cursor: not-allowed;
+      }
+    }
+  
+    .filterContainer {
+      display: flex;
+      align-items: center;
+  
+      label {
+        margin-right: 1em;
+        color: white; 
+      }
+  
+      .filterCheckbox {
+        margin-left: 0.5em;
+      }
+    }
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: space-evenly;
+  
+    .card {
+      flex: 0 0 calc(33.33% - 1.5em);
+      margin-bottom: 1.5em;
+    }
+  }
+  
