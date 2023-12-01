@@ -1,0 +1,50 @@
+.mainContainer {
+    transform: scale(1.08);  
+    background: linear-gradient(rgba(100, 100, 100, 0.5), rgba(100, 100, 100, 0.8)), url('../../assets/pokeball.jpg');  
+    background-size: cover;
+    background-position: center;
+    width: 25em;
+    height: 33em;
+    
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2em;
+    overflow: hidden;
+  
+    h3 {
+      margin: 0.2em;
+      font-size: 1rem;    
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .detail {
+      margin: 0.2em;
+      font-size: 1.2rem;    
+      color: rgb(255, 255, 255);
+    }
+  
+    img {
+      width: 100%;
+      height: 60%;
+      object-fit: cover;
+      font-size: 2rem; 
+      filter: brightness(1.20); 
+          
+    }
+  
+    h3:last-child {
+      margin-top: auto;
+    }
+  
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.13);
+      box-shadow: 15px 15px 8px 0px rgba(0, 0, 0, 0.75);
+    }
+  }  
