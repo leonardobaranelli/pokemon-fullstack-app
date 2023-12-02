@@ -1,0 +1,107 @@
+.mainContainer {
+    background-color: rgba(146, 74, 175, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    margin-left: 1em;
+    margin-right: 1em;
+  
+    .container {
+      margin-bottom: 20px;
+      position: relative;
+  
+      label {
+        margin-bottom: 5px;
+      }
+  
+      input {
+        margin-top: 0.2em;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        width: 120%; 
+        margin-left: -10%;
+      }
+  
+      span {
+        color: #ff5555;
+        font-size: 14px;
+        margin-top: 5px;
+        position: absolute; 
+        bottom: -20px; 
+        left: 0;
+      }
+  
+      .validationMessage {
+        color: #ff0000;
+        font-size: 0.75em;      
+        background-color: #fff;        
+        border-radius: 5px;
+        margin-left: -10%;      
+        transition: padding 1s; 
+      }
+  
+      .alertVisible {
+        padding: 5px; 
+      }
+    }
+  
+    input[type="checkbox"] {
+      margin-right: 5px;
+      display: inline;
+    }
+  
+    button {
+      background-color: rgba(69, 160, 73, 0.8);
+      color: white;
+      margin-top: 2.7em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #4caf50;
+        transform: scale(1.05);
+      }
+    
+      &:active {
+        transform: scale(1.2);
+      }
+    
+      &:disabled {
+        background-color: #808080;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  .checkboxs{
+    span {
+      color: #ff5555;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 5px;
+      position: absolute; 
+      bottom: -20px;    
+    }
+  
+    .validationMessage {
+      color: #ff0000;
+      font-size: 0.75em;          
+      background-color: #fff;        
+      border-radius: 5px;
+      margin-left: -5.5%;      
+      margin-bottom: 1%;      
+      transition: padding 0.5s;
+    }
+  
+    .alertVisible {
+      padding: 5px; 
+    }
+  }  
