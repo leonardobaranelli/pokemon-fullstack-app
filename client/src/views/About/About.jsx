@@ -5,30 +5,30 @@ const About = () => {
   return (    
     <div className={styles.mainContainer}>
       <div className={styles.miHistoria}>
-      <p>¡Bienvenido!</p>
+        <p>Welcome!</p>
         <p>
-        Mi viaje creativo ha tomado forma a través de este proyecto que se transformó en algo personal. Navegué por el desarrollo web, utilizando tecnologías como Node.js, Express, React, Redux, y PostgreSQL con Sequelize.
+        My creative journey has taken shape through this project, which turned into something personal. I navigated through web development, using technologies such as Node.js, Express, React, Redux, and PostgreSQL with Sequelize.
         </p>
         <p>
-          Enfocado en la experiencia del usuario, diseñé una interfaz atractiva y funcional. Desde búsquedas dinámicas hasta la creación de pokemons a medida.
+        Focused on the user experience, I designed an attractive and functional interface. From dynamic searches to creating custom Pokémon.
         </p>
         <p>
-          En el back-end, utilicé Node.js, Express, y PostgreSQL con Sequelize para gestionar la base de datos. Mientras que la pokeapi provee abundante información sobre dichos pokemons. La integración de Git y GitHub asegura una gestión de versiones sólida.
+        On the back-end, I used Node.js, Express, and PostgreSQL with Sequelize to manage the database. While the PokeAPI provides abundant information about these Pokémon. The integration of Git and GitHub ensures robust version control.
         </p>
         <p>
-          La aplicación práctica de React y Redux me enseñó la inmensa capacidad que tienen ambas tecnologías en conjunto, nunca había experimentado tanta potencia en un front-end web.
+        The practical application of React and Redux taught me the immense capability these technologies have when combined; I had never experienced such power in a web front-end before.
         </p>
         <p>
-          Este proyecto me permitió consolidar habilidades en desarrollo web vistas en el bootcamp, lo cual fue muy gratificante. La inmersión en el universo de los pokemons también fue interesante y nostálgica.
+        This project allowed me to consolidate web development skills acquired in the boot camp, which was very rewarding. Immersing myself in the Pokémon universe was also interesting and nostalgic.
         </p>
         <p>
-          Este proyecto es solo un paso más en este emocionante viaje como desarrollador web.
+        This project is just one more step in this exciting journey as a web developer.
         </p>
         <p>
-          Estoy muy agradecido con Henry por todo el soporte brindado durante todo el periodo académico.
+        I am very grateful to Henry for all the support provided throughout the academic period.
         </p>
         <p>
-          ¡Puedes ver más de mi trabajo en mi <a href="https://github.com/leonardobaranelli" target="_blank" rel="noopener noreferrer">GitHub</a>!
+        You can see more of my work on my <a href="https://github.com/leonardobaranelli" target="_blank" rel="noopener noreferrer">GitHub</a>!
         </p>
       </div>
     </div>
