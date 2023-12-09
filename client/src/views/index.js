@@ -1,6 +1,7 @@
-import Home from "./Home/Home";
-import Landing from "./Landing/Landing";
 import Details from "./Details/Details";
-import About from "./About/About";
+import Home from "./Home/Home";
+import Form from "./Form/Form";
+import Landing from "./Landing/Landing";
+import About from "../views/About/About";
 
-export { Home, Landing, Details, About };
+export { Details, Home, Form, Landing, About };
