@@ -5,7 +5,7 @@ export const _getPokeByName = (name) => {
     return async (dispatch) => {
       try {
         const apiData = await axios.get(
-          `http://localhost:3001/pokemons/name?name=${name}`
+          `${process.env.REACT_APP_BACKEND_URL}/pokemons/name?name=${name}`
         );
         const pokemon = apiData.data.data;
         dispatch({

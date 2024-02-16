@@ -55,7 +55,7 @@ const CardsContainer = () => {
 
   const deletePokemon = async (id) => {
     await axios
-      .delete(`http://localhost:3001/pokemons/delete/${id}`)
+      .delete(`${process.env.REACT_APP_BACKEND_URL}/pokemons/delete/${id}`)
       .then((res) => {
         showAlert(res.data.message || "Success!", "success");
         dispatch(getPokemons());

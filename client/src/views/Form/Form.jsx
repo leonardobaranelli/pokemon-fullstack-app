@@ -40,7 +40,7 @@ const Form = () => {
     
     const pokeDataWithImage = { ...data, image: defaultImage };
   
-    axios.post('http://localhost:3001/pokemons', pokeDataWithImage)
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/pokemons`, pokeDataWithImage)
     .then((res) => showAlert(res.data.message || 'Success!', 'success'))
     .catch((error) => {
         showAlert(errorHandler(error), 'error')
