@@ -1,5 +1,4 @@
-.mainContainer {
-    transform: scale(1.08);  
+.mainContainer {    
     background: linear-gradient(rgba(100, 100, 100, 0.5), rgba(100, 100, 100, 0.8)), url('../../assets/pokeball.jpg');  
     background-size: cover;
     background-position: center;
@@ -44,7 +43,7 @@
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   
     &:hover {
-      transform: scale(1.13);
-      box-shadow: 15px 15px 8px 0px rgba(0, 0, 0, 0.75);
+      transform: scale(1.01);
+      box-shadow: 25px 25px 12px 0px rgba(0, 0, 0, 0.75);
     }
   }  
